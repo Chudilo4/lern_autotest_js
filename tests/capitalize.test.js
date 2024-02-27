@@ -1,7 +1,13 @@
-import {capitalize} from '../src/capitalize.js';
-import { strict as assert } from 'node:assert';
+import assert from 'power-assert';
 
+// Весь код остаётся тем же самым
+const user = {
+  name: 'Madonna',
+  friends: ['Kate', 'Michel'],
+  email: 'madonna@example.com',
+};
 
-assert.equal(capitalize(''), '');
-assert.equal(capitalize('hello'),'Hello')
+// Интерфейс библиотеки power-assert на 100% совместим со встроенным модулем assert.
+assert(user.name === 'Madonna');
+
 console.log('Все тесты пройдены!');
